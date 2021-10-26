@@ -1,17 +1,39 @@
-valorDolar = 3800
-valorPeso = 0.00026
-moneda_inicial = int(input("Escoge la moneda que tienes y quieres convertir: (1)Cop , (2)Dolares: "))
-monto_inicial = float(input("introduce la cantidad de dinero: "))
-if (moneda_inicial == 1):
-    valorConvertido = monto_inicial/valorDolar
-    monto_inicial = str(monto_inicial)
-    valorConvertido = round(valorConvertido,2)
-    valorConvertido = str(valorConvertido)
-    print("El valor de tus "+monto_inicial+" en dolares es: $" + valorConvertido)
-elif(moneda_inicial ==2):
-    valorConvertido = monto_inicial*valorDolar
-    monto_inicial = str(monto_inicial)
-    valorConvertido = str(valorConvertido)
-    print("El valor de tus "+monto_inicial+" en Cop es: " + valorConvertido)
+# creando cadena de caracteres de varias lineas
+#windows. (punto) para agregar emojis
+menu = """
+    Bienvenido al conversor de moendas 💲
+
+    1-Pesos colombianos
+    2-Pesos argentinos
+    3-Pesos mexicanos
+
+    Elige una opción: """
+
+opcion = int(input(menu))
+
+if opcion == 1:
+    pesos = input("Cuantos pesos Colombianos tienes?: ")
+    pesos = float(pesos)
+    valor_dolar = 3875
+    dolares = pesos / valor_dolar
+    dolares = round(dolares,2)
+    dolares = str(dolares)
+    print("tienes $:" + dolares + " dolares")
+elif opcion == 2:
+    pesos = input("Cuantos pesos Argentinos tienes?: ")
+    pesos = float(pesos)
+    valor_dolar = 65
+    dolares = pesos / valor_dolar
+    dolares = round(dolares,2)
+    dolares = str(dolares)
+    print("tienes $:" + dolares + " dolares")
+elif opcion == 3:
+    pesos = input("Cuantos pesos Mexicanos tienes?: ")
+    pesos = float(pesos)
+    valor_dolar = 24
+    dolares = pesos / valor_dolar
+    dolares = round(dolares,2)
+    dolares = str(dolares)
+    print("tienes $:" + dolares + " dolares")
 else:
-    print("no introdujiste un numero valido")
+    print("Agrega una opcion valida")
