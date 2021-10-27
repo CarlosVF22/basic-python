@@ -1,5 +1,15 @@
 # creando cadena de caracteres de varias lineas
-#windows. (punto) para agregar emojis
+# windows. (punto) para agregar emojis
+# es importante que las funciones esten en la parte mas arriba del codigo
+
+def conversor(tipo_pesos, valor_dolar ):
+    pesos = input("Cuantos pesos " + tipo_pesos + " tienes?: ")
+    pesos = float(pesos)
+    dolares = pesos / valor_dolar
+    dolares = round(dolares,2)
+    dolares = str(dolares)
+    print("tienes $:" + dolares + " dolares")
+
 menu = """
     Bienvenido al conversor de moendas 💲
 
@@ -12,28 +22,10 @@ menu = """
 opcion = int(input(menu))
 
 if opcion == 1:
-    pesos = input("Cuantos pesos Colombianos tienes?: ")
-    pesos = float(pesos)
-    valor_dolar = 3875
-    dolares = pesos / valor_dolar
-    dolares = round(dolares,2)
-    dolares = str(dolares)
-    print("tienes $:" + dolares + " dolares")
+    conversor("Colombianos", 3875)
 elif opcion == 2:
-    pesos = input("Cuantos pesos Argentinos tienes?: ")
-    pesos = float(pesos)
-    valor_dolar = 65
-    dolares = pesos / valor_dolar
-    dolares = round(dolares,2)
-    dolares = str(dolares)
-    print("tienes $:" + dolares + " dolares")
+    conversor("Argentinos", 65)
 elif opcion == 3:
-    pesos = input("Cuantos pesos Mexicanos tienes?: ")
-    pesos = float(pesos)
-    valor_dolar = 24
-    dolares = pesos / valor_dolar
-    dolares = round(dolares,2)
-    dolares = str(dolares)
-    print("tienes $:" + dolares + " dolares")
+    conversor("Mexicanos", 24)
 else:
     print("Agrega una opcion valida")
